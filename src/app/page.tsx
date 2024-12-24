@@ -38,9 +38,10 @@ const AnimatedText = () => {
 
 const AnimatedEndText = () => {
   const lines = [
-    "תודה על התמיכה שלכם!",
-    "בזכותכם אנחנו יכולים להמשיך ולהאיר את הלבבות.",
-    "נשמח לראותכם שוב בקרוב."
+    "שיר זה נכתב בלב אוהב,",
+    "למען כל הנשמות שבכלא,",
+    "להאיר את הלבבות החשוכים,",
+    "ולהביא תקווה ואור לכל פינה."
   ];
 
   return (
@@ -48,7 +49,7 @@ const AnimatedEndText = () => {
       {lines.map((line, i) => (
         <motion.p
           key={i}
-          className="text-2xl md:text-3xl text-white leading-relaxed text-center font-light my-2"
+          className="text-lg md:text-xl text-gray-700 leading-relaxed text-center font-light my-2"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -146,6 +147,8 @@ export default function Home() {
       <DonationCards />
       <PoemSection />
 
+      <AnimatedEndText />
+
       {/* תמונה בסוף העמוד */}
       <div className="relative container mx-auto px-4 py-20">
         <Image
@@ -156,8 +159,6 @@ export default function Home() {
           className="rounded-3xl shadow-lg mx-auto"
         />
       </div>
-
-      <AnimatedEndText />
 
       {/* פוטר משודרג */}
       <footer className="bg-gradient-to-b from-white to-orange-50 py-12 text-center">
