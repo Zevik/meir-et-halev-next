@@ -36,6 +36,34 @@ const AnimatedText = () => {
   );
 };
 
+const AnimatedEndText = () => {
+  const lines = [
+    "תודה על התמיכה שלכם!",
+    "בזכותכם אנחנו יכולים להמשיך ולהאיר את הלבבות.",
+    "נשמח לראותכם שוב בקרוב."
+  ];
+
+  return (
+    <div className="max-w-5xl mx-auto backdrop-blur-sm bg-white/10 rounded-3xl p-10 border border-white/20 mt-10">
+      {lines.map((line, i) => (
+        <motion.p
+          key={i}
+          className="text-2xl md:text-3xl text-white leading-relaxed text-center font-light my-2"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            delay: i * 0.5,
+            ease: "easeOut"
+          }}
+        >
+          {line}
+        </motion.p>
+      ))}
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
@@ -128,6 +156,8 @@ export default function Home() {
           className="rounded-3xl shadow-lg mx-auto"
         />
       </div>
+
+      <AnimatedEndText />
 
       {/* פוטר משודרג */}
       <footer className="bg-gradient-to-b from-white to-orange-50 py-12 text-center">
