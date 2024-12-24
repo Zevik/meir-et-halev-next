@@ -10,6 +10,7 @@ export default function VideoSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="bg-white rounded-2xl shadow-2xl overflow-hidden"
         >
           <div className="relative pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
