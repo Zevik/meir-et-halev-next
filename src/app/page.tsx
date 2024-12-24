@@ -1,6 +1,5 @@
 'use client'
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import DonationCards from "@/components/donation-cards";
 import VideoSection from "@/components/video-section";
