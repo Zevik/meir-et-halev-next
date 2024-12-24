@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
 import DonationCards from "@/components/donation-cards";
 import VideoSection from "@/components/video-section";
 import PoemSection from "@/components/poem-section";
@@ -10,9 +10,21 @@ import Image from "next/image";
 const AnimatedText = () => {
   const text = "שלוש פעמים בשבוע, אני נוסע לבתי כלא בארץ, למפגשים של תרפיה עם מוזיקה, עם שירה, עם תפילה ועם דיבורים מהלב. שלוש פעמים בשבוע אני יורד לבור חשוך להאיר את הלב, וכל פעם אנחנו עוברים ביחד מסע מיוחד וטוב, פנימה. רק בזכות הוראות הקבע שלכם אני יכול להמשיך בפעילות המיוחדת הזאת וכך אתם מהווים חלק ממשי מהאור שחודר אל הלבבות מבעד לחומות.";
   const words = text.split(" ");
+  const [scope, animate] = useAnimate();
+
+  const handleWordAppear = (index: number) => {
+    const progress = index / words.length;
+    const scrollAmount = progress * 300; // adjust this value to control scroll speed
+    
+    window.scrollTo({
+      top: scrollAmount,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <motion.div 
+      ref={scope}
       className="max-w-5xl mx-auto backdrop-blur-sm bg-white/10 rounded-3xl p-10 border border-white/20"
     >
       <p className="text-3xl md:text-4xl text-white leading-relaxed text-center font-light">
@@ -24,9 +36,10 @@ const AnimatedText = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.3,
-              delay: i * 0.1,
+              delay: i * 0.2, // slowed down by factor of 2
               ease: "easeOut"
             }}
+            onAnimationStart={() => handleWordAppear(i)}
           >
             {word}
           </motion.span>
@@ -66,6 +79,8 @@ export default function Home() {
             />
           ))}
         </div>
+        {/* New overlay for extra depth */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
 
         <div className="relative container mx-auto px-4 py-20">
           {/* תוכן ראשי */}
@@ -98,7 +113,7 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl font-bold text-center mb-4 text-orange-500"
+            className="text-3xl md:text-4xl font-bold text-center mb-4 text-orange-500"
           >
             אבל מאיר! איך אפשר להצטרף לטוב הזה?
           </motion.h2>
@@ -118,14 +133,40 @@ export default function Home() {
       <DonationCards />
       <PoemSection />
 
+      {/* New CTA before the final image */}
+      <section className="py-12">
+        <div className="container mx-auto px-4 text-center">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="text-3xl font-bold text-gray-800 mb-4"
+          >
+            מוכנים להצטרף ולתמוך?
+          </motion.h3>
+          <motion.button
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl shadow-xl font-semibold transition-transform duration-300 hover:scale-105"
+          >
+            Donate Now
+          </motion.button>
+        </div>
+      </section>
+
       {/* תמונה בסוף העמוד */}
-      <div className="relative container mx-auto px-4 py-10">
+      <div className="relative mx-auto px-4 bg-transparent">
         <Image
           src="/meir.jpeg"
-          alt="Descriptive Alt Text"
+          alt="מאיר את הלב"
           width={1200}
           height={800}
-          className="rounded-3xl shadow-lg mx-auto"
+          priority
+          loading="eager"
+          className="rounded-3xl shadow-lg mx-auto w-full"
         />
       </div>
 
@@ -135,6 +176,29 @@ export default function Home() {
           <p className="text-gray-600 text-lg">
             ליצירת קשר: 052-6518168
           </p>
+          {/* Social icons row */}
+          <div className="flex justify-center gap-4 mt-4">
+            <motion.a
+              href="#"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileHover={{ scale: 1.1 }}
+              whileInView={{ opacity: 1 }}
+              className="text-gray-500 hover:text-orange-500 transition-colors transform"
+            >
+              {/* פייסבוק אייקון לדוגמה */}
+              <svg /* ...icon code... */ />
+            </motion.a>
+            <motion.a
+              href="#"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileHover={{ scale: 1.1 }}
+              whileInView={{ opacity: 1 }}
+              className="text-gray-500 hover:text-orange-500 transition-colors transform"
+            >
+              {/* אינסטגרם אייקון לדוגמה */}
+              <svg /* ...icon code... */ />
+            </motion.a>
+          </div>
         </div>
       </footer>
     </div>
