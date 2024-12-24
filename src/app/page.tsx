@@ -90,6 +90,17 @@ export default function Home() {
 
       {/* סקשנים נוספים */}
       <VideoSection />
+      
+      {/* סקשן חדש עם כותרת וטקסט */}
+      <section className="bg-white py-12">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-4">כותרת חדשה</h2>
+          <p className="text-lg text-center text-gray-700">
+            טקסט חדש מתחת לסקשן הוידאו.
+          </p>
+        </div>
+      </section>
+
       <DonationCards />
       <PoemSection />
 
