@@ -58,7 +58,12 @@ export default function DonationCards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              whileHover={{
+                y: -5,
+                scale: 1.02,
+                boxShadow: "0 15px 25px rgba(0,0,0,0.1)",
+                transition: { duration: 0.2 }
+              }}
               className="bg-white rounded-3xl shadow-xl overflow-hidden transform transition-all"
             >
               <div className="relative h-64 w-full overflow-hidden">
