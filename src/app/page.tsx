@@ -40,7 +40,7 @@ const AnimatedText = () => {
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="min-h-screen font-[family-name:var(--font-geist-sans)] overflow-x-hidden">
       {/* Hero Section */}
       <main className="relative min-h-[90vh] overflow-hidden">
         {/* גרדיאנט רקע מונפש */}
@@ -71,7 +71,7 @@ export default function Home() {
         {/* New overlay for extra depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
 
-        <div className="relative container mx-auto px-4 py-20">
+        <div className="relative container mx-auto px-2 sm:px-4 py-20">
           {/* תוכן ראשי */}
           <div className="flex flex-col items-center gap-12">
             <motion.div
@@ -122,19 +122,20 @@ export default function Home() {
       <DonationCards />
       <PoemSection />
 
-
-      {/* תמונה בסוף העמוד */}
-      <div className="relative mx-auto px-4 bg-transparent">
-        <Image
-          src="/meir.jpeg"
-          alt="מאיר את הלב"
-          width={1200}
-          height={800}
-          priority
-          loading="eager"
-          className="rounded-3xl shadow-lg mx-auto w-full"
-        />
-      </div>
+      {/* Final section with background and image */}
+      <section className="relative bg-gradient-to-br from-orange-50 via-white to-yellow-50 py-20">
+        <div className="container mx-auto px-2 sm:px-4 max-w-4xl"> {/* Changed to max-w-4xl to match poem section */}
+          <Image
+            src="/meir.jpeg"
+            alt="מאיר את הלב"
+            width={896}    // 56rem * 16px = 896px
+            height={600}
+            priority
+            loading="eager"
+            className="rounded-3xl shadow-lg mx-auto w-full"
+          />
+        </div>
+      </section>
 
       {/* פוטר משודרג */}
       <footer className="bg-gradient-to-b from-white to-orange-50 py-12 text-center">

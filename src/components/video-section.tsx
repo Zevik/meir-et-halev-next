@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function VideoSection() {
   return (
-    <section className="relative -mt-20 py-20 px-4">
+    <section className="relative -mt-20 py-20 px-2 sm:px-4">
       <div className="container mx-auto max-w-4xl">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

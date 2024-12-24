@@ -39,7 +39,7 @@ const donationOptions = [
 export default function DonationCards() {
   return (
     <section id="donate" className="py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-2 sm:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
