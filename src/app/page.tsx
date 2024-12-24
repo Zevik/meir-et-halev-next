@@ -94,10 +94,24 @@ export default function Home() {
       {/* סקשן חדש עם כותרת וטקסט */}
       <section className="bg-white py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">כותרת חדשה</h2>
-          <p className="text-lg text-center text-gray-700">
-            טקסט חדש מתחת לסקשן הוידאו.
-          </p>
+          <motion.h2 
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl font-bold text-center mb-4 text-orange-500"
+          >
+            אבל מאיר! איך אפשר להצטרף לטוב הזה?
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg text-center text-gray-700 max-w-3xl mx-auto"
+          >
+            תנו אור לנשמות בכלא – תמכו בכמה נשמות שתרצו להאיר
+            <br />
+            כל פעם שאני מגיע לבתי הכלא, אנחנו שרים, מתפללים ומביאים אור. כל מפגש הוא מסע משותף פנימה, להאיר את הלב. ואתם יכולים לבחור להיות חלק ממשי במסע הזה, לתת אור לכמה נשמות שתרצו.
+          </motion.p>
         </div>
       </section>
 
