@@ -6,65 +6,6 @@ import VideoSection from "@/components/video-section";
 import PoemSection from "@/components/poem-section";
 import Image from "next/image";
 
-// קומפוננטה חדשה להנפשת טקסט מילה אחרי מילה
-const AnimatedText = () => {
-  const text = "שלוש פעמים בשבוע, אני נוסע לבתי כלא בארץ, למפגשים של תרפיה עם מוזיקה, עם שירה, עם תפילה ועם דיבורים מהלב. שלוש פעמים בשבוע אני יורד לבור חשוך להאיר את הלב, וכל פעם אנחנו עוברים ביחד מסע מיוחד וטוב, פנימה. רק בזכות הוראות הקבע שלכם אני יכול להמשיך בפעילות המיוחדת הזאת וכך אתם מהווים חלק ממשי מהאור שחודר אל הלבבות מבעד לחומות.";
-  const words = text.split(" ");
-
-  return (
-    <motion.div 
-      className="max-w-5xl mx-auto backdrop-blur-sm bg-white/10 rounded-3xl p-10 border border-white/20"
-    >
-      <p className="text-3xl md:text-4xl text-white leading-relaxed text-center font-light">
-        {words.map((word, i) => (
-          <motion.span
-            key={i}
-            className="inline-block mx-1"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.3,
-              delay: i * 0.1,  // כל מילה מתחילה 0.1 שניות אחרי הקודמת
-              ease: "easeOut"
-            }}
-          >
-            {word}
-          </motion.span>
-        ))}
-      </p>
-    </motion.div>
-  );
-};
-
-const AnimatedEndText = () => {
-  const lines = [
-    "שיר זה נכתב בלב אוהב,",
-    "למען כל הנשמות שבכלא,",
-    "להאיר את הלבבות החשוכים,",
-    "ולהביא תקווה ואור לכל פינה."
-  ];
-
-  return (
-    <div className="max-w-5xl mx-auto backdrop-blur-sm bg-white/10 rounded-3xl p-10 border border-white/20 mt-10">
-      {lines.map((line, i) => (
-        <motion.p
-          key={i}
-          className="text-lg md:text-xl text-gray-700 leading-relaxed text-center font-light my-2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            delay: i * 0.5,
-            ease: "easeOut"
-          }}
-        >
-          {line}
-        </motion.p>
-      ))}
-    </div>
-  );
-};
-
 export default function Home() {
   return (
     <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
@@ -111,8 +52,6 @@ export default function Home() {
               </h1>
               <div className="w-24 h-1 bg-white/30 mx-auto rounded-full"></div>
             </motion.div>
-            
-            <AnimatedText />
           </div>
         </div>
       </main>
@@ -147,10 +86,8 @@ export default function Home() {
       <DonationCards />
       <PoemSection />
 
-      <AnimatedEndText />
-
       {/* תמונה בסוף העמוד */}
-      <div className="relative container mx-auto px-4 py-20">
+      <div className="relative container mx-auto px-4 py-10">
         <Image
           src="/meir.jpeg"
           alt="Descriptive Alt Text"
