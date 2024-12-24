@@ -10,7 +10,7 @@ import Image from "next/image";
 const AnimatedText = () => {
   const text = "שלוש פעמים בשבוע, אני נוסע לבתי כלא בארץ, למפגשים של תרפיה עם מוזיקה, עם שירה, עם תפילה ועם דיבורים מהלב. שלוש פעמים בשבוע אני יורד לבור חשוך להאיר את הלב, וכל פעם אנחנו עוברים ביחד מסע מיוחד וטוב, פנימה. רק בזכות הוראות הקבע שלכם אני יכול להמשיך בפעילות המיוחדת הזאת וכך אתם מהווים חלק ממשי מהאור שחודר אל הלבבות מבעד לחומות.";
   const words = text.split(" ");
-  const [scope, animate] = useAnimate();
+  const [scope] = useAnimate(); // Removed unused 'animate' variable
 
   const handleWordAppear = (index: number) => {
     const progress = index / words.length;
