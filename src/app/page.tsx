@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import DonationCards from "@/components/donation-cards";
 import VideoSection from "@/components/video-section";
 import PoemSection from "@/components/poem-section";
+import Image from "next/image";
 
 // קומפוננטה חדשה להנפשת טקסט מילה אחרי מילה
 const AnimatedText = () => {
@@ -110,6 +111,17 @@ export default function Home() {
       <VideoSection />
       <DonationCards />
       <PoemSection />
+
+      {/* תמונה בסוף העמוד */}
+      <div className="relative container mx-auto px-4 py-20">
+        <Image
+          src="/path/to/your/image.jpg"
+          alt="Descriptive Alt Text"
+          width={1200}
+          height={800}
+          className="rounded-3xl shadow-lg mx-auto"
+        />
+      </div>
 
       {/* פוטר משודרג */}
       <footer className="bg-gradient-to-b from-white to-orange-50 py-12 text-center">
