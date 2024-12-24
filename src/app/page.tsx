@@ -133,29 +133,6 @@ export default function Home() {
       <DonationCards />
       <PoemSection />
 
-      {/* New CTA before the final image */}
-      <section className="py-12">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="text-3xl font-bold text-gray-800 mb-4"
-          >
-            מוכנים להצטרף ולתמוך?
-          </motion.h3>
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl shadow-xl font-semibold transition-transform duration-300 hover:scale-105"
-          >
-            Donate Now
-          </motion.button>
-        </div>
-      </section>
 
       {/* תמונה בסוף העמוד */}
       <div className="relative mx-auto px-4 bg-transparent">
