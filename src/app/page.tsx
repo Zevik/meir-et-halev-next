@@ -115,7 +115,7 @@ export default function Home() {
       {/* תמונה בסוף העמוד */}
       <div className="relative container mx-auto px-4 py-20">
         <Image
-          src="/path/to/your/image.jpg"
+          src="/path/to/correct/image.jpg"
           alt="Descriptive Alt Text"
           width={1200}
           height={800}
