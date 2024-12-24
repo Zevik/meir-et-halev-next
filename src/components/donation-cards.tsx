@@ -82,7 +82,7 @@ export default function DonationCards() {
                                  py-4 px-6 font-bold text-lg shadow-lg
                                  hover:from-orange-600 hover:to-yellow-600 
                                  transition-all duration-300 transform hover:scale-[1.02]">
-                  תרום עכשיו
+                  לחצו לתרומה
                 </button>
               </div>
             </motion.div>

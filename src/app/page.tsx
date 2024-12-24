@@ -84,25 +84,6 @@ export default function Home() {
             </motion.div>
             
             <AnimatedText />
-
-            {/* כפתור קריאה לפעולה */}
-            <motion.a
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#donate"
-              className="rounded-full bg-white/90 backdrop-blur-sm text-orange-500 
-                       px-10 py-5 text-xl font-bold
-                       hover:bg-white hover:shadow-lg
-                       transition-all duration-300
-                       fixed bottom-6 right-4 left-4 text-center
-                       sm:static sm:w-auto
-                       border border-white/20"
-            >
-              תרום עכשיו
-            </motion.a>
           </div>
         </div>
       </main>
