@@ -22,8 +22,9 @@ export default function VideoSection() {
             ></iframe>
           </div>
           <div className="p-8 text-center bg-gradient-to-b from-white to-orange-50">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">צפו בפעילות שלנו</h2>
-            <p className="text-gray-600">הצטרפו למסע המיוחד שלנו בבתי הכלא</p>
+            <p className="text-3xl font-bold text-gray-800">
+              הצטרפו למסע המיוחד שלי בבתי הכלא
+            </p>
           </div>
         </motion.div>
       </div>
