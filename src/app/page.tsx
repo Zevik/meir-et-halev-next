@@ -10,17 +10,7 @@ import Image from "next/image";
 const AnimatedText = () => {
   const text = "שלוש פעמים בשבוע, אני נוסע לבתי כלא בארץ, למפגשים של תרפיה עם מוזיקה, עם שירה, עם תפילה ועם דיבורים מהלב. שלוש פעמים בשבוע אני יורד לבור חשוך להאיר את הלב, וכל פעם אנחנו עוברים ביחד מסע מיוחד וטוב, פנימה. רק בזכות הוראות הקבע שלכם אני יכול להמשיך בפעילות המיוחדת הזאת וכך אתם מהווים חלק ממשי מהאור שחודר אל הלבבות מבעד לחומות.";
   const words = text.split(" ");
-  const [scope] = useAnimate(); // Removed unused 'animate' variable
-
-  const handleWordAppear = (index: number) => {
-    const progress = index / words.length;
-    const scrollAmount = progress * 300; // adjust this value to control scroll speed
-    
-    window.scrollTo({
-      top: scrollAmount,
-      behavior: 'smooth'
-    });
-  };
+  const [scope] = useAnimate();
 
   return (
     <motion.div 
@@ -36,10 +26,9 @@ const AnimatedText = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{
               duration: 0.3,
-              delay: i * 0.2, // slowed down by factor of 2
+              delay: i * 0.2,
               ease: "easeOut"
             }}
-            onAnimationStart={() => handleWordAppear(i)}
           >
             {word}
           </motion.span>
