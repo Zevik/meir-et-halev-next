@@ -10,13 +10,9 @@ import Image from "next/image";
 const AnimatedText = () => {
   const text = "שלוש פעמים בשבוע, אני נוסע לבתי כלא בארץ, למפגשים של תרפיה עם מוזיקה, עם שירה, עם תפילה ועם דיבורים מהלב. שלוש פעמים בשבוע אני יורד לבור חשוך להאיר את הלב, וכל פעם אנחנו עוברים ביחד מסע מיוחד וטוב, פנימה. רק בזכות הוראות הקבע שלכם אני יכול להמשיך בפעילות המיוחדת הזאת וכך אתם מהווים חלק ממשי מהאור שחודר אל הלבבות מבעד לחומות.";
   const words = text.split(" ");
-  const [scope] = useAnimate();
 
   return (
-    <motion.div 
-      ref={scope}
-      className="max-w-5xl mx-auto backdrop-blur-sm bg-white/10 rounded-3xl p-10 border border-white/20"
-    >
+    <div className="max-w-5xl mx-auto">
       <p className="text-3xl md:text-4xl text-white leading-relaxed text-center font-light">
         {words.map((word, i) => (
           <motion.span
@@ -34,7 +30,7 @@ const AnimatedText = () => {
           </motion.span>
         ))}
       </p>
-    </motion.div>
+    </div>
   );
 };
 
@@ -84,7 +80,6 @@ export default function Home() {
                            [text-shadow:_2px_2px_10px_rgb(0_0_0_/_20%)]">
                 מאיר את הלב
               </h1>
-              <div className="w-24 h-1 bg-white/30 mx-auto rounded-full"></div>
             </motion.div>
             
             <AnimatedText />
