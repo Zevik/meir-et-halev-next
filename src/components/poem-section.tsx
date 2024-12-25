@@ -49,7 +49,7 @@ export default function PoemSection() {
   ];
 
   return (
-    <section className="pt-12 pb-20 md:py-32 bg-gradient-to-br from-orange-50 via-white to-yellow-50"> {/* Changed from py-20 to pt-12 pb-20 */}
+    <section className="pt-8 pb-20 md:py-32 bg-gradient-to-br from-orange-50 via-white to-yellow-50"> {/* Changed from pt-12 to pt-8 */}
       <div className="container mx-auto px-2 sm:px-4 max-w-4xl">
         <motion.h2 
           ref={ref}
@@ -57,7 +57,7 @@ export default function PoemSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-bold text-center mb-8 {/* Changed from mb-16 to mb-8 */}
+          className="text-5xl md:text-7xl font-bold text-center mb-4 {/* Changed from mb-8 to mb-4 */}
                      bg-gradient-to-r from-orange-500 to-yellow-500 
                      text-transparent bg-clip-text"
         >
