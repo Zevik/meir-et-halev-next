@@ -138,36 +138,20 @@ export default function Home() {
       </section>
 
       {/* פוטר משודרג */}
-      <footer className="bg-gradient-to-b from-white to-orange-50 py-12 text-center">
-        <div className="container mx-auto px-4">
-          <p className="text-gray-600 text-lg">
-            ליצירת קשר: 052-6518168
+      <footer className="bg-gradient-to-b from-white to-orange-50 py-8 text-center">
+        <div className="container mx-auto px-4 max-w-2xl">
+          <p className="text-3xl md:text-4xl font-bold text-orange-500">
+            מאיר אבינר{" "}
+            <a 
+              href="tel:052-6518168" 
+              className="hover:text-orange-600 transition-colors"
+            >
+              052-6518168
+            </a>
           </p>
-          {/* Social icons row */}
-          <div className="flex justify-center gap-4 mt-4">
-            <motion.a
-              href="#"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileHover={{ scale: 1.1 }}
-              whileInView={{ opacity: 1 }}
-              className="text-gray-500 hover:text-orange-500 transition-colors transform"
-            >
-              {/* פייסבוק אייקון לדוגמה */}
-              <svg /* ...icon code... */ />
-            </motion.a>
-            <motion.a
-              href="#"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileHover={{ scale: 1.1 }}
-              whileInView={{ opacity: 1 }}
-              className="text-gray-500 hover:text-orange-500 transition-colors transform"
-            >
-              {/* אינסטגרם אייקון לדוגמה */}
-              <svg /* ...icon code... */ />
-            </motion.a>
-          </div>
         </div>
       </footer>
+
     </div>
   );
 }
