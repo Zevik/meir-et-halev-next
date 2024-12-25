@@ -96,7 +96,7 @@ export default function Home() {
       <VideoSection />
       
       {/* סקשן חדש עם כותרת וטקסט */}
-      <section className="bg-white py-12">
+      <section className="bg-white pt-4 pb-12"> {/* Changed from py-12 to pt-4 pb-12 */}
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
