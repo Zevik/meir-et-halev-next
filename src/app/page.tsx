@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useAnimate } from "framer-motion";
+import { motion } from "framer-motion"; // Removed useAnimate
 import DonationCards from "@/components/donation-cards";
 import VideoSection from "@/components/video-section";
 import PoemSection from "@/components/poem-section";
