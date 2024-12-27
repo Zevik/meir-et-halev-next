@@ -27,7 +27,7 @@ export default function PoemSection() {
   ];
 
   return (
-    <section className="pt-8 pb-20 md:py-32 bg-gradient-to-br from-orange-50 via-white to-yellow-50"> {/* Changed from pt-12 to pt-8 */}
+    <section className="pt-8 pb-20 md:py-32 bg-gradient-to-br from-accent-cream via-white to-accent-orange/10"> {/* Changed from pt-12 to pt-8 */}
       <div className="container mx-auto px-2 sm:px-4 max-w-4xl">
         <motion.h2 
           ref={ref}
@@ -36,7 +36,7 @@ export default function PoemSection() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           viewport={{ once: true }}
           className="text-5xl md:text-7xl font-bold text-center mb-4 {/* Changed from mb-8 to mb-4 */}
-                     bg-gradient-to-r from-orange-500 to-yellow-500 
+                     bg-gradient-to-r from-primary-dark to-primary 
                      text-transparent bg-clip-text"
         >
           יש לי פרצוף

@@ -38,7 +38,7 @@ const donationOptions = [
 
 export default function DonationCards() {
   return (
-    <section id="donate" className="py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50">
+    <section id="donate" className="py-20 bg-gradient-to-br from-accent-cream via-white to-accent-orange/10">
       <div className="container mx-auto px-2 sm:px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,15 +77,15 @@ export default function DonationCards() {
               </div>
               <div className="p-8 bg-gradient-to-b from-white to-orange-50">
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">{option.title}</h3>
-                <div className="text-3xl font-bold text-orange-500 mb-4">
+                <div className="text-3xl font-bold text-primary-dark mb-4">
                   {option.price} ₪
                 </div>
                 <p className="text-gray-600 mb-6 min-h-[80px]">
                   {option.description}
                 </p>
-                <button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white rounded-xl 
+                <button className="w-full bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl 
                                  py-4 px-6 font-bold text-lg shadow-lg
-                                 hover:from-orange-600 hover:to-yellow-600 
+                                 hover:from-primary-dark hover:to-primary 
                                  transition-all duration-300 transform hover:scale-[1.02]">
                   לחצו לתרומה
                 </button>
