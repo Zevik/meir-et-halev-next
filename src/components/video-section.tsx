@@ -11,7 +11,7 @@ export default function VideoSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="bg-white rounded-2xl shadow-2xl overflow-hidden"
+          className="bg-accent-cream/10 rounded-2xl shadow-2xl overflow-hidden"
         >
           <div className="relative pt-[56.25%]"> {/* 16:9 Aspect Ratio */}
             <iframe
@@ -22,8 +22,8 @@ export default function VideoSection() {
               allowFullScreen
             ></iframe>
           </div>
-          <div className="p-8 text-center bg-gradient-to-b from-white to-orange-50">
-            <p className="text-3xl text-gray-800"> {/* Removed font-bold */}
+          <div className="p-8 text-center bg-gradient-to-b from-accent-cream to-accent-cream/30">
+            <p className="text-3xl text-primary-dark">
               הצטרפו למסע המיוחד שלי בבתי הכלא
             </p>
           </div>

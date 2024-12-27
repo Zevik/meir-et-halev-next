@@ -40,7 +40,7 @@ export default function Home() {
       {/* Hero Section */}
       <main className="relative min-h-[90vh] overflow-hidden">
         {/* גרדיאנט רקע מונפש */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-yellow-400 to-orange-500">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-dark via-primary to-accent-orange">
           {/* אפקט גלים */}
           {[...Array(3)].map((_, i) => (
             <motion.div
@@ -65,7 +65,7 @@ export default function Home() {
           ))}
         </div>
         {/* New overlay for extra depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-primary-dark/20 pointer-events-none" />
 
         <div className="relative container mx-auto px-2 sm:px-4 py-20">
           {/* תוכן ראשי */}
@@ -76,8 +76,8 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-6xl md:text-8xl font-bold text-white mb-4
-                           [text-shadow:_2px_2px_10px_rgb(0_0_0_/_20%)]">
+              <h1 className="text-6xl md:text-8xl font-bold text-accent-cream mb-4
+                           [text-shadow:_2px_2px_10px_rgb(195_14_89_/_40%)]">
                 מאיר את הלב
               </h1>
             </motion.div>
@@ -91,13 +91,13 @@ export default function Home() {
       <VideoSection />
       
       {/* סקשן חדש עם כותרת וטקסט */}
-      <section className="bg-white pt-4 pb-12"> {/* Changed from py-12 to pt-4 pb-12 */}
+      <section className="bg-accent-cream/30 pt-4 pb-12">
         <div className="container mx-auto px-4">
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl font-bold text-center mb-4 text-orange-500"
+            className="text-3xl md:text-4xl font-bold text-center mb-4 text-primary-dark"
           >
             אבל מאיר! איך אפשר להצטרף לטוב הזה?
           </motion.h2>
@@ -105,7 +105,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-lg text-center text-gray-700 max-w-3xl mx-auto"
+            className="text-lg text-center text-primary-dark/80 max-w-3xl mx-auto"
           >
             תנו אור לנשמות בכלא – תמכו בכמה נשמות שתרצו להאיר
             <br />
@@ -118,7 +118,7 @@ export default function Home() {
       <PoemSection />
 
       {/* Final section with background and image */}
-      <section className="relative bg-gradient-to-br from-orange-50 via-white to-yellow-50 py-20">
+      <section className="relative bg-gradient-to-br from-accent-cream/80 to-accent-orange/20 py-20">
         <div className="container mx-auto px-2 sm:px-4 max-w-4xl"> {/* Changed to max-w-4xl to match poem section */}
           <Image
             src="/meir.jpeg"
@@ -133,9 +133,9 @@ export default function Home() {
       </section>
 
       {/* פוטר משודרג */}
-      <footer className="bg-gradient-to-b from-white to-orange-50 py-8 text-center">
+      <footer className="bg-gradient-to-b from-accent-cream to-accent-orange py-8 text-center">
         <div className="container mx-auto px-4 max-w-2xl">
-          <p className="text-3xl md:text-4xl font-bold text-orange-500">
+          <p className="text-3xl md:text-4xl font-bold text-primary">
             מאיר אבינר{" "}
             <a 
               href="tel:052-6518168" 

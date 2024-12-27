@@ -27,7 +27,7 @@ export default function PoemSection() {
   ];
 
   return (
-    <section className="pt-8 pb-20 md:py-32 bg-gradient-to-br from-accent-cream via-white to-accent-orange/10"> {/* Changed from pt-12 to pt-8 */}
+    <section className="pt-8 pb-20 md:py-32 bg-gradient-to-br from-accent-cream via-accent-cream/30 to-accent-orange/10"> {/* Changed from pt-12 to pt-8 */}
       <div className="container mx-auto px-2 sm:px-4 max-w-4xl">
         <motion.h2 
           ref={ref}
