@@ -23,7 +23,7 @@ export default function VideoSection() {
             ></iframe>
           </div>
           <div className="p-8 text-center bg-gradient-to-b from-white to-orange-50">
-            <p className="text-3xl font-bold text-gray-800">
+            <p className="text-3xl text-gray-800"> {/* Removed font-bold */}
               הצטרפו למסע המיוחד שלי בבתי הכלא
             </p>
           </div>
