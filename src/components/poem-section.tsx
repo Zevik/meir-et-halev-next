@@ -43,17 +43,17 @@ export default function PoemSection() {
         </motion.h2>
 
         {/* רקע דקורטיבי */}
-        <div className="absolute -top-10 right-0 w-40 h-40 bg-orange-100 rounded-full blur-3xl opacity-30" />
-        <div className="absolute -bottom-10 left-0 w-40 h-40 bg-yellow-100 rounded-full blur-3xl opacity-30" />
+        <div className="absolute -top-10 right-0 w-40 h-40 bg-accent-orange/30 rounded-full blur-3xl opacity-30" />
+        <div className="absolute -bottom-10 left-0 w-40 h-40 bg-primary/20 rounded-full blur-3xl opacity-30" />
 
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="bg-white/50 backdrop-blur-sm rounded-3xl p-12 shadow-xl"
+          className="bg-accent-cream/10 backdrop-blur-sm rounded-3xl p-12 shadow-xl"
         >
-          <div className="text-2xl leading-relaxed text-gray-700 text-right">
+          <div className="text-2xl leading-relaxed text-primary-dark/90 text-right">
             {poemLines.map((line, i) => (
               <motion.div
                 key={i}

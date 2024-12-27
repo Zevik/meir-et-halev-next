@@ -46,8 +46,8 @@ export default function DonationCards() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">בחרו את מסלול התרומה שלכם</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">כל תרומה מאירה נשמה נוספת</p>
+          <h2 className="text-4xl font-bold text-primary-dark mb-4">בחרו את מסלול התרומה שלכם</h2>
+          <p className="text-xl text-primary-dark/80 max-w-2xl mx-auto">כל תרומה מאירה נשמה נוספת</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -64,7 +64,7 @@ export default function DonationCards() {
                 boxShadow: "0 15px 25px rgba(0,0,0,0.1)",
                 transition: { duration: 0.2 }
               }}
-              className="bg-white rounded-3xl shadow-xl overflow-hidden transform transition-all"
+              className="bg-accent-cream/10 rounded-3xl shadow-xl overflow-hidden transform transition-all"
             >
               <div className="relative h-64 w-full overflow-hidden">
                 <Image
@@ -75,12 +75,12 @@ export default function DonationCards() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
-              <div className="p-8 bg-gradient-to-b from-white to-orange-50">
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">{option.title}</h3>
-                <div className="text-3xl font-bold text-primary-dark mb-4">
+              <div className="p-8 bg-gradient-to-b from-white to-accent-cream/20">
+                <h3 className="text-2xl font-bold text-primary-dark mb-2">{option.title}</h3>
+                <div className="text-3xl font-bold text-primary mb-4">
                   {option.price} ₪
                 </div>
-                <p className="text-gray-600 mb-6 min-h-[80px]">
+                <p className="text-primary-dark/80 mb-6 min-h-[80px]">
                   {option.description}
                 </p>
                 <button className="w-full bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl 
