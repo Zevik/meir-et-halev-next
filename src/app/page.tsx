@@ -135,15 +135,15 @@ export default function Home() {
       {/* פוטר משודרג */}
       <footer className="bg-gradient-to-b from-accent-cream to-accent-orange py-8 text-center">
         <div className="container mx-auto px-4 max-w-2xl">
-          <p className="text-3xl md:text-4xl font-bold text-primary">
-            מאיר אבינר{" "}
-            <a 
-              href="tel:052-6518168" 
-              className="hover:text-orange-600 transition-colors"
-            >
-              052-6518168
-            </a>
+          <p className="text-3xl md:text-4xl font-bold text-primary mb-2">
+            מאיר אבינר
           </p>
+          <a 
+            href="tel:052-6518168" 
+            className="text-3xl md:text-4xl font-bold text-primary hover:text-primary-dark transition-colors"
+          >
+            052-6518168
+          </a>
         </div>
       </footer>
 
